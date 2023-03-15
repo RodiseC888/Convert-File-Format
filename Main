@@ -1,0 +1,8 @@
+#Convert pdf to png
+#%pip install poppler-utils
+from pdf2image import convert_from_path
+
+images = convert_from_path(r"C:\Users\tomcheung\Desktop\ABSS Premier Print Job.pdf", 800)
+
+for image in images:
+    image.save(r"C:\Users\tomcheung\Desktop\ABSS Premier Print Job.jpg", 'JPEG')
